@@ -12,12 +12,12 @@ class _PagLeonardoState extends State<PagLeonardo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Oscar Leonardo Lopez Gonzalez'),
+        title: Text('Oscar Leonardo Lopez Gonzaldgfdgdfez'),
       ),
        body: Center(
          child: Column(
            children: <Widget>[
-             Text('Estas en la pagina de Leo',
+             Text('Estas en la paginarrddgdgfdgdfg de Leo',
                 style: TextStyle(
                   color: Colors.blue,
                   fontSize: 30.0,
