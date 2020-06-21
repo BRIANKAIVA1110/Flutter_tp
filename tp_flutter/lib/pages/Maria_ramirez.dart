@@ -9,45 +9,45 @@ class PagMaria extends StatefulWidget{
   @override
   _PagMariaState createState() => _PagMariaState();
 }
-class _PagMariaState extends State<PagMaria> {
-@override 
 
 
+class _PagMariaState extends State<PagMaria> {  
+  
+  @override 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text('Maria Itati Ramirez'),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: <Color>[
-              Colors.orange[200],
-              Colors.lightBlueAccent
-            ])          
-         ),        
-     ),      
- ),
-       // title: Text('Maria Itati Ramirez'),
-      
-       body: Container(
-         
-         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("lib/src/img/Mariaprinc.jpg"),
-            fit: BoxFit.cover,
-          ),
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text('Maria Itati Ramirez'),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: <Color>[
+                Colors.orange[200],
+                Colors.lightBlueAccent
+              ])          
+            ),        
+          ),      
         ),
-         child: Padding(
-           padding: const EdgeInsets.all(20.0),
-           child: Center(
-             child: Column(
-               children: <Widget>[
-                 
-                //new Image.asset("lib/src/img/Mariaprinc.jpg"),
-                 Text('Nuevo Destino',
+       // title: Text('Maria Itati Ramirez'),
+        body: ListView(
+          children: <Widget>[
+            Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                image: AssetImage("lib/src/img/Mariaprinc.jpg"),
+                fit: BoxFit.cover,
+                ),
+              ),
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Center(
+                child: Column(
+                  children: <Widget>[
+                  //new Image.asset("lib/src/img/Mariaprinc.jpg"),
+                  Text('Nuevo Destino',
                   style: TextStyle(
                     color: Colors.orange[100],
                     fontSize: 30.0,
@@ -62,31 +62,34 @@ class _PagMariaState extends State<PagMaria> {
                   SizedBox(height:10.0),
                   campoFecha('Fecha de Salida'),
                   SizedBox(height:10.0),
-                  campoFecha('Fecha de Regreso'),                 
+                  campoFecha('Fecha de Regreso'),              
                ],
              ),
            ),
          ),
        ),
+        ],
+      ),
     );
   }
 
-Widget campo(String nombre){
-  return TextField(
+  Widget campo(String nombre){
+    return TextField(
 
-    decoration:InputDecoration(
-      contentPadding:const EdgeInsets.symmetric(vertical: 10.0) ,
-      hintText:nombre ,
-      fillColor: Colors.white,
-      filled: true,
-      border:OutlineInputBorder(
-        borderRadius: BorderRadius.circular(15),
-      )
-    ),
-   );
-}
-Widget campoFecha( String fecha){
-  return TextField(
+      decoration:InputDecoration(
+        contentPadding:const EdgeInsets.symmetric(vertical: 10.0) ,
+        hintText:nombre ,
+        fillColor: Colors.white,
+        filled: true,
+        border:OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+        )
+      ),
+    );
+  }
+
+  Widget campoFecha( String fecha){
+    return TextField(
                    onTap:(){
                      DatePicker.showDatePicker(context,
                       showTitleActions:true,
@@ -109,5 +112,7 @@ Widget campoFecha( String fecha){
                       ),
                     ),
                  );
+    }
+
 }
-}
+
