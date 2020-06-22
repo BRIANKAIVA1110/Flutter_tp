@@ -19,7 +19,6 @@ class BrianPage extends StatelessWidget{
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>ArticulosForm()))
                   .whenComplete(() => Navigator.pop(context))
                   .whenComplete(() => Navigator.push(context, MaterialPageRoute(builder: (context)=>BrianPage())));
-
               },
             ),
             // margin: EdgeInsets.all(10),
@@ -62,15 +61,6 @@ class ArticulosPageState extends State<ArticulosPage>{
     return  ListView(
         children: itemsDetalis,
     );
-  }
-
-  update(){
-    for (var articulo in MockDb.listArticulo)
-    {
-      setState(() {
-        itemsDetalis.add(ItemDetail(titulo: articulo.nombre, subTitulo: articulo.descripcion));  
-      });
-    }
   }
 }
 
