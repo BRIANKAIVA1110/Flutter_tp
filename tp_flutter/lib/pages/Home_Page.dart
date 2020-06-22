@@ -1,4 +1,3 @@
-import 'package:tp_flutter/pages/page1_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -11,10 +10,10 @@ class HomePage extends StatefulWidget{
 
 
 class _HomePageState extends State<HomePage> {
-@override 
+
 
 double sizecontainer= 100.0;
-
+@override 
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
@@ -45,7 +44,7 @@ Widget build(BuildContext context) {
                       SizedBox(height:10.0),
                       contenedorcaja(Colors.red  ,"Leo", sizecontainer,'Oscar Leonardo Lopez Gonzalez'),
                       SizedBox(height:10.0),
-                      contenedorcaja(Colors.blue  ,"Brian", sizecontainer,'pagina1'),
+                      contenedorcaja(Colors.blue  ,"Brian", sizecontainer,'brianpage'),
                       SizedBox(height:10.0),
                       contenedorcaja(Colors.yellow  ,"Vacante", sizecontainer,'pagina1'),
                      ],
@@ -58,7 +57,7 @@ Widget build(BuildContext context) {
                        SizedBox(height:10.0),
                        contenedorcaja(Colors.lightGreen, "Lopez",sizecontainer,'Oscar Leonardo Lopez Gonzalez'),
                        SizedBox(height:10.0),
-                       contenedorcaja(Colors.purple, "Villarroel", sizecontainer,'pagina1'),
+                       contenedorcaja(Colors.purple, "Villarroel", sizecontainer,'brianpage'),
                        SizedBox(height:10.0),
                        contenedorcaja(Colors.orange, "NN", sizecontainer,'pagina1'),
                      ],
