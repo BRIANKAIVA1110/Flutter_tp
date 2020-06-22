@@ -1,3 +1,4 @@
+import 'package:tp_flutter/pages/brian_villarroel_page.dart';
 import 'package:tp_flutter/pages/page1_page.dart';
 import 'package:flutter/material.dart';
 import 'package:tp_flutter/pages/Home_Page.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         'pagina1':(BuildContext context)=> PaginaUno(),
         'Maria Itati Ramirez':(BuildContext context)=> PagMaria(),
         'Oscar Leonardo Lopez Gonzalez':(BuildContext context)=> PagLeonardo(),
+        'brianpage':(BuildContext context)=> BrianPage(),
       },
     );
   }
