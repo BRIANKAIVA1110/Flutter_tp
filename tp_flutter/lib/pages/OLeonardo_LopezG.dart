@@ -18,7 +18,6 @@ DateTime _dateTime;
   Widget build(BuildContext context) {
     return   Scaffold(
       appBar: AppBar(
-     
         title: Text('Oscar Leonardo Lopez Gonzalez'),
         
       ),

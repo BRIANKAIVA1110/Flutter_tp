@@ -16,6 +16,7 @@ class _PagMariaState extends State<PagMaria> {
   @override 
   Widget build(BuildContext context) {
     return Scaffold(
+      
         appBar: AppBar(
           centerTitle: true,
           title: Text('Maria Itati Ramirez'),
@@ -37,8 +38,8 @@ class _PagMariaState extends State<PagMaria> {
             Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                image: AssetImage("lib/src/img/Mariaprinc.jpg"),
-                fit: BoxFit.cover,
+                  image: AssetImage("lib/src/img/Mariaprinc.jpg"),
+                  fit: BoxFit.cover,
                 ),
               ),
             child: Padding(
@@ -62,9 +63,24 @@ class _PagMariaState extends State<PagMaria> {
                   SizedBox(height:10.0),
                   campoFecha('Fecha de Salida'),
                   SizedBox(height:10.0),
-                  campoFecha('Fecha de Regreso'),              
+                  campoFecha('Fecha de Regreso'),
+                  SizedBox(height:10.0),           
+                  campo('Presupuesto'),
+                  SizedBox(height:10.0),           
+                  RaisedButton(
+                    color: Colors.cyan,
+                    textColor: Colors.white,
+                    child: Text(
+                      "Envíar",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                    ),
+                    onPressed: () {}),
                ],
+               
              ),
+             
            ),
          ),
        ),
@@ -110,6 +126,7 @@ class _PagMariaState extends State<PagMaria> {
                       border: OutlineInputBorder(
                         borderRadius:BorderRadius.circular(15),
                       ),
+                      helperText: 'Seleccione Fecha',
                     ),
                  );
     }
