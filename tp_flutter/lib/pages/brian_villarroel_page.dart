@@ -49,24 +49,20 @@ class ArticulosPageState extends State<ArticulosPage>{
   void initState() {
     super.initState();
     for (var articulo in MockDb.listArticulo)
-    {
       setState(() {
         itemsDetalis.add(ItemDetail(titulo: articulo.nombre, subTitulo: articulo.descripcion));  
       });
-    }
+    
       
   }
   @override
-  Widget build(BuildContext context) {
-    return  ListView(
-        children: itemsDetalis,
-    );
-  }
+  Widget build(BuildContext context) => ListView(children: itemsDetalis,);
+  
 }
 
 
 /*
- * custom widget para mostrar detalles
+ * custom widget para mostrar detalles articulos
  */
 class ItemDetail extends StatelessWidget{
   String titulo;
@@ -75,12 +71,29 @@ class ItemDetail extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(10),
+      margin: EdgeInsets.only(
+        left: 10,
+        bottom: 5,
+        right: 10,
+        top: 10
+      ),
+      color: Colors.blue,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(this.titulo??"???",style: TextStyle(fontSize: 25)),
-          Text(this.subTitulo??"???",style: TextStyle(fontSize: 15)),
+          ListTile(
+            title:Text(this.titulo??"???",
+            style: TextStyle(fontSize: 25)),
+            contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0)
+            ),
+          ListTile(
+            title:Text(this.subTitulo??"???",
+            style: TextStyle(fontSize: 15)),
+            contentPadding: EdgeInsets.only(
+              left: 20,
+              top: 1
+            ),
+            )
           // Divider( color: Colors.blue,),
         ],
       ),
